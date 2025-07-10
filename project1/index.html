@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Job Tracker</h1>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <main>
+    <aside>
+      <h3>Filter by Status</h3>
+      <select id="statusFilter">
+        <option value="all">All</option>
+        <option value="applied">Applied</option>
+        <option value="interview">Interview</option>
+        <option value="selected">Selected</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </aside>
+
+    <section id="jobList">
+      <!-- Jobs will be shown here -->
+    </section>
+  </main>
+
+  <button id="addJobBtn">➕ Add Job</button>
+
+  <!-- Job Modal -->
+  <div id="jobModal" class="hidden">
+    <form id="jobForm">
+      <input type="text" placeholder="Company Name" id="company" required />
+      <input type="text" placeholder="Job Role" id="role" required />
+      <input type="text" placeholder="Location" id="location" required />
+      <select id="jobstatus">
+        <option value="applied">Applied</option>
+        <option value="interview">Interview</option>
+        <option value="selected">Selected</option>
+        <option value="rejected">Rejected</option>
+      </select>
+      <input type="date" id="date" required />
+      <button type="submit">Save</button>
+      <button type="button" id="closeModal">Cancel</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
